@@ -159,13 +159,13 @@ public:
         }
     }
 
-    string srecv(int count) {
-        if (count > 32768){
+    string srecv(int length) {
+        if (length > 32768){
             cout << "Error: srecv max value 32768" << endl;
             exit(EXIT_FAILURE);
         }
         char buffer[65536];
-        recv(s, buffer, count, 0);
+        recv(s, buffer, length, 0);
         string recv_data = buffer;
         return recv_data;
 
