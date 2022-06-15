@@ -164,7 +164,7 @@ public:
             cout << "Error: srecv max value 32768" << endl;
             exit(EXIT_FAILURE);
         }
-        char buffer[65536];
+        char buffer[32768];
         recv(s, buffer, length, 0);
         string recv_data = buffer;
         return recv_data;
@@ -177,7 +177,7 @@ public:
             exit(EXIT_FAILURE);
         }
         recvdata data;
-        char buffer[65536];
+        char buffer[32768];
         data.length = recv(s, buffer, length, 0);
         data.value = buffer;
         return data;
