@@ -1,2 +1,2 @@
 # ssocket-cpp
-Simple clossplatform socket library.
+Simple cross-platform socket library.
